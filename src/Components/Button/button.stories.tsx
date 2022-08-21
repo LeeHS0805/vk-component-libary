@@ -4,23 +4,34 @@ import { action } from "@storybook/addon-actions";
 
 import Button from "./button";
 
+const style = {
+  marginRight: "10px",
+};
 const defaultButton = () => (
   //@ts-ignore
   <Button onClick={action("clicked")}> default button </Button>
 );
 
 const buttonWithSize = () => (
-  <>
-    <Button size="lg"> large button </Button>
+  <div>
+    <Button size="lg" style={style}>
+      large button{" "}
+    </Button>
     <Button size="sm"> small button </Button>
-  </>
+  </div>
 );
 
 const buttonWithType = () => (
   <>
-    <Button btnType="primary"> primary button </Button>
-    <Button btnType="danger"> danger button </Button>
-    <Button btnType="link" href="https://google.com">
+    <Button btnType="primary" style={style}>
+      {" "}
+      primary button{" "}
+    </Button>
+    <Button btnType="danger" style={style}>
+      {" "}
+      danger button{" "}
+    </Button>
+    <Button btnType="link" href="https://google.com" style={style}>
       {" "}
       link button{" "}
     </Button>

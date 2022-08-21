@@ -3,6 +3,7 @@ import React, {
   AnchorHTMLAttributes,
   FC,
   ReactNode,
+  CSSProperties,
 } from "react";
 import classnames from "classnames";
 
@@ -17,7 +18,10 @@ interface BaseButtonProps {
   size?: ButtonSize;
   /**设置 Button 的类型 */
   btnType?: ButtonType;
+  /**设置 Button 的点击链接 */
   href?: string;
+  /**设置 Button 的自定义样式 */
+  style?: CSSProperties;
   children: ReactNode;
 }
 
