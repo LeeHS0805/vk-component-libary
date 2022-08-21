@@ -9,6 +9,7 @@ jobs:
         with:
           node-version: '14'
       - uses: actions/cache@v1
+        with:
           path: node_modules
           key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
       - if: steps.cache.outputs.cache-hit != 'true'
