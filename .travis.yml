@@ -13,5 +13,5 @@ deploy:
   skip_cleanup: true
   github_token: $github_token
   local_dir: storybook-static
-  on: 
+  on:
     branch: master
