@@ -60,9 +60,3 @@ Button.defaultProps = {
   btnType: "default",
 };
 export default Button;
-
-// import React, { FC } from "react";
-// export const Button: FC<any> = () => {
-//   return <div>1</div>;
-// };
-// export default Button;

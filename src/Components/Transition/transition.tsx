@@ -1,8 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import { CSSTransition } from "react-transition-group";
 import { CSSTransitionProps } from "react-transition-group/CSSTransition";
-import { TransitionChildren } from "react-transition-group/Transition";
-import { menuItemProps } from "../Menu/menuItem";
 
 type AnimationName =
   | "zoom-in-top"

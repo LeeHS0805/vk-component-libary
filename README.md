@@ -2,69 +2,90 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 可使用的脚本
 
-In the project directory, you can run:
+### 一些本地开发命令
 
-### `npm start`
+```
+//启动本地环境
+npm run stroybook
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+//进行单元测试
+npm test
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+//发布静态文件
+npm run build
 
-### `npm test`
+//发布到 npm
+npm run publish
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ToDos
 
-### `npm run build`
+### Input组件
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [x] Default / Disabled
+- [x] With icon
+- [x] 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Menu组件
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] Vertical 模式
+- [x] Horizont 模式
+- [x] SubMenu
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 引入的库
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### react-testing-libary
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm i @testing-library/react
+npm i @testing-library/jest-dom -D
 
-## Learn More
+@testing-library/react   测试React Component
+@testing-library/jest-dom   提供更丰富的dom断言api
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### react-fontawesome
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+仅使用了`solid`版本
 
-### Code Splitting
+```
+npm i --save @fortawesome/fontawesome-svg-core 
+         @fortawesome/free-solid-svg-icons 
+         @fortawesome/react-fontawesome
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### react-transition-group
 
-### Analyzing the Bundle Size
+```
+npm i react-transition-group @types/react-transition-group -S
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### storybook
 
-### Advanced Configuration
+```
+npx storybook init
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### addOn：react-docgen-typescript-loader
 
-### Deployment
+```
+npm install --save-dev react-docgen-typescript-loader
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**踩坑**
 
-### `npm run build` fails to minify
+- React下的属性需要导出使用
+- 除 export default 组件外，还要单独 export 组件
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+import React, { Component } from 'react';
+
+export const ColorButton: React.SFC<ColorButtonProps>
+```
+

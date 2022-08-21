@@ -1,16 +1,11 @@
-import React, {
-  FC,
-  ReactElement,
-  InputHTMLAttributes,
-  ChangeEvent,
-} from "react";
+import React, { ReactElement, InputHTMLAttributes, ChangeEvent } from "react";
 import classNames from "classnames";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Icon from "../Icon/icon";
 
 type InputSize = "lg" | "sm";
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLElement>, "size"> {
+
+interface InputProps {
   /**是否禁用 Input */
   disabled?: boolean;
   /**设置 input 大小，支持 lg 或者是 sm */
@@ -33,7 +28,10 @@ export interface InputProps
  * ~~~
  * 支持 HTMLInput 的所有基本属性
  */
-const Input: React.FC<InputProps> = (props) => {
+export type InputNativeProps = Partial<
+  InputProps & Omit<Omit<InputHTMLAttributes<HTMLElement>, "size">, "onChange">
+>;
+export const Input: React.FC<InputNativeProps> = (props) => {
   const { disabled, size, icon, prepend, append, style, ...restProps } = props;
   const cnames = classNames("viking-input-wrapper", {
     [`input-size-${size}`]: size,

@@ -9,7 +9,10 @@ import {
 import Menu, { MenuProps } from "./menu";
 import MenuItem from "./menuItem";
 import SubMenu from "./subMenu";
-import subMenu from "./subMenu";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+library.add(fas);
+
 const testProps: MenuProps = {
   defaultIndex: "0",
   onSelect: jest.fn(),
@@ -86,7 +89,7 @@ describe("test menu and menuItem component", () => {
   });
   it("should show dropdown items when hover on subMenu", async () => {
     const SubMenu = wrapper.getByTestId("test-sub-menu");
-    expect(wrapper.queryByText("close1")).not.toBeVisible();
+    expect(wrapper.queryByText("close1")).toBe(null);
     fireEvent.mouseEnter(SubMenu);
     await waitFor(() => {
       expect(wrapper.queryByText("close1")).toBeVisible();

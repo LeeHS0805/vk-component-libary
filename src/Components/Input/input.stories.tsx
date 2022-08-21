@@ -15,14 +15,14 @@ export const ControlledInput = () => {
   );
 };
 export const defaultInput = () => (
-  <>
+  <div>
     <Input
       style={{ width: "300px" }}
       placeholder="placeholder"
       onChange={action("changed")}
     />
     <ControlledInput />
-  </>
+  </div>
 );
 export const disabledInput = () => (
   <Input style={{ width: "300px" }} placeholder="disabled input" disabled />
@@ -37,21 +37,21 @@ export const iconInput = () => (
 );
 
 export const sizeInput = () => (
-  <>
+  <div>
     <Input style={{ width: "300px" }} defaultValue="large size" size="lg" />
     <Input style={{ width: "300px" }} placeholder="small size" size="sm" />
-  </>
+  </div>
 );
 
 export const pandInput = () => (
-  <>
+  <div>
     <Input
       style={{ width: "300px" }}
       defaultValue="prepend text"
       prepend="https://"
     />
     <Input style={{ width: "300px" }} defaultValue="google" append=".com" />
-  </>
+  </div>
 );
 
 storiesOf("Input", module)
