@@ -1,6 +1,6 @@
 {
   "name": "vk-component-libary",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React component library by leehs_lay",
   "keywords": [
     "Component",
@@ -12,7 +12,7 @@
   "types": "dist/index.d.ts",
   "private": false,
   "license": "MIT",
-  "homepage": "https://github.com/LeeHS0805/vk-component-libary",
+  "homepage": "https://leehs0805.github.io/vk-component-libary/",
   "repository": {
     "type": "git",
     "url": "https://github.com/LeeHS0805/vk-component-libary"

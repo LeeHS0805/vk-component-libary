@@ -1,14 +1,31 @@
-# Getting Started with Create React App
+# Getting started with vk components libary
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+组件库项目基于 `React / TypeScript` 进行开发,使用 `react-testing-library` 完成单元测试，使用 `storybook` 本地调试和生成文档页面；使用 husky 进行提交发布前验证，Github Actions CI/CD 集成；
+
+实现了 Input、Button、AutoComplete、Menu、Icon、Transition、Upload 等常用组件；
+
+项目发布了 `npm` 包，可进行快速引用；
+
+## 使用参考
+
+### NPM
+
+https://www.npmjs.com/package/vk-component-libary
+
+### 在线文档
+
+https://leehs0805.github.io/vk-component-libary/
 
 ## 可使用的脚本
 
 ### 一些本地开发命令
 
 ```
-//启动本地环境
-npm run stroybook
+//启动 storybook 本地服务
+npm run storybook
+
+//打包 storybook 静态资源
+npm run build-storybook
 
 //进行单元测试
 npm test
@@ -19,22 +36,6 @@ npm run build
 //发布到 npm
 npm run publish
 ```
-
-## ToDos
-
-### Input组件
-
-- [x] Default / Disabled
-- [x] With icon
-- [x] 
-
-### Menu组件
-
-- [x] Vertical 模式
-- [x] Horizont 模式
-- [x] SubMenu
-
-
 
 ## 引入的库
 
@@ -63,8 +64,6 @@ npm i --save @fortawesome/fontawesome-svg-core
 ```
 npm i react-transition-group @types/react-transition-group -S
 ```
-
-
 
 ### storybook
 
