@@ -48,7 +48,7 @@
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "lint": "eslint --ext js,ts,tsx src",
-    "prepublish": "npm run test:no-watch && npm run lint && npm run build",
+    "prepublishOnly": "npm run test:no-watch && npm run lint && npm run build",
     "prepare": "husky install"
   },
   "eslintConfig": {
