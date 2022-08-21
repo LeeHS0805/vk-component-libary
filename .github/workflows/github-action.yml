@@ -8,9 +8,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
+      - uses: actions/cache@v1
           path: node_modules
           key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
-      - run: npm install
+      - if: steps.cache.outputs.cache-hit != 'true'
+          run: npm install
       - run: npm run build-storybook
       - uses: peaceiris/actions-gh-pages@v3
         with:
